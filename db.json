@@ -1,110 +1,65 @@
 {
-    "search" : "mrn:12345XYZ",
-    "refills" :
-    [
-        {
-            "refillKey" : {
-                "refillId" : "REFILL-ID-GUID-1111",
-                "rxCustomerId" : 1234567, // this changed to a NUMBER not a STRING
-                "rxSource" : "FMCRx_FL", // or FMCRx_TN
-            },
-            "rxNumber" : 12345678,
-            "rxDateExpires" : "11/01/2015", // added for RELEASE_2.1
-            "medication" : "aspirin",
-            "directions" : "take once a day",
-            "daysSupply" : 30,
-            "refillsRemaining" : 4,
-            "lastFilledDate" : "08/21/2015",
-            "refillDate" : "10/21/2015", // not sure what this date represents
-            "prescriberFirstName" : "Donald",
-            "prescriberLastName" : "Duck",
-            "refillConsent" : null // indicates consent not yet collected by CS
-        },
-        {
-            "refillKey" : {
-                "refillId" : "REFILL-ID-GUID-2222",
-                "rxCustomerId" : 1234567,
-                "rxSource" : "FMCRx_FL",
-            },
-            "rxNumber" : 56781234,
-            "rxDateExpires" : "11/01/2015", // added for RELEASE_2.1
-            "medication" : "penicillin",
-            "directions" : "take once a day",
-            "daysSupply" : 30,
-            "refillsRemaining" : 4,
-            "lastFilledDate" : "09/30/2015",
-            "refillDate" : "11/30/2015", // not sure what this date represents
-            "prescriberFirstName" : "Donald",
-            "prescriberLastName" : "Duck",
-            "refillConsent" : { // contains consent collected by CS
-                "refillKey" : {
-                    "refillId" : "REFILL-ID-GUID-2222",
-                    "rxCustomerId" : 1234567, // this changed to a NUMBER not a STRING
-                    "rxSource" : "FMCRx_FL", // or FMCRx_TN
-                },
-                "rxNumber" : 12345678, // CHANGE!!! added to refill consent data structure,
-                "rxDateExpires" : "11/01/2015", // added for RELEASE_2.1
-                "refillDate" : "11/30/2015",
-                "userAction" : 1, // YES_FILL_NOW
-                "consentRequestedOn" : null, // added for RELEASE_2.1, "2015-12-03T17:47:54.728-05:00" UTC format, date only present when previously signed and userAction = 4 (ask me later), otherwise null
-                "futureFillDate" : null, // only present when userAction = 2
-                "doNotFillReason" : -1, // only present when userAction = 3, otherwise use -1
-                "doNotFillNotes" : null, // only present when doNotFillReason = 5 and user provided notes
-                "signature" : { // obtained from signature service call
-                    "staffCn" : "223456",
-                    "staffId" : "223456", // login id diff than CN for some users in portal
-                    "staffFirstName" : "Jane",
-                    "staffLastName" : "Smith",
-                    "staffTitle" : "RN",
-                    "signatureDateTime" : "2015-12-03T17:47:54.728-05:00",
-                    "signatureToken" : "OPAQUE-TOKEN-0001",
-                    "signatureSourceId" : "1443",
-                    "signatureSourceType" : "clinicId"
-                }  
-            }
-        },
-        {
-            "refillKey" : {
-                    "refillId" : "REFILL-ID-GUID-3333",
-                    "rxCustomerId" : 1234567,
-                    "rxSource" : "FMCRx_FL",
-            },
-            "rxNumber" : 56781234,
-            "medication" : "water",
-            "directions" : "take with meals",
-            "daysSupply" : 30,
-            "refillsRemaining" : 12,
-            "lastFilledDate" : "08/15/2015",
-            "refillDate" : "11/15/2015", // not sure what this date represents
-            "prescriberFirstName" : "Donald",
-            "prescriberLastName" : "Duck",
-            "refillConsent" : { // contains consent collected by CS
-                "refillKey" : {
-                    "refillId" : "REFILL-ID-GUID-3333",
-                    "rxCustomerId" : 1234567,
-                    "rxSource" : "FMCRx_FL",
-                },
-                "rxNumber" : 56781234, // CHANGE!!! added to refill consent data structure
-                "rxDateExpires" : "11/01/2015", // added for RELEASE_2.1
-                "refillDate" : "11/15/2015",
-                "userAction" : 2, // YES_FILL_FUTURE_DATE
-                "consentRequestedOn" : null, // added for RELEASE_2.1, "2015-12-03T17:47:54.728-05:00" UTC format, date only present when previously signed and userAction = 4 (ask me later), otherwise null
-                "futureFillDate" : "11/10/2015", // only present when userAction = 2
-                "doNotFillReason" : -1, // only present when userAction = 3, otherwise use -1
-                "doNotFillNotes" : null, // only present when doNotFillReason = 5 and user provided notes
-                "signature" : { // obtained from signature service call
-                    "staffCn" : "334567",
-                    "staffId" : "334567", // login id diff than CN for some users in portal
-                    "staffFirstName" : "Joe",
-                    "staffLastName" : "Black",
-                    "staffTitle" : "RN",
-                    "signatureDateTime" : "2015-12-03T17:47:54.728-05:00",
-                    "signatureToken" : "OPAQUE-TOKEN-0002",
-                    "signatureSourceId" : "1443",
-                    "signatureSourceType" : "clinicId"
-                }  
-            }
-        }
-    ]
+	"search": "mrn:12345XYZ",
+	"refills": [{
+			"refillKey": {
+				"refillId": "REFILL-ID-GUID-1111",
+				"rxCustomerId": 1234567,
+				"rxSource": "FMCRx_FL"
+			},
+			"rxNumber": 12345678,
+			"rxDateExpires": "11/01/2015",
+			"medication": "aspirin",
+			"directions": "take once a day",
+			"daysSupply": 30,
+			"refillsRemaining": 4,
+			"lastFilledDate": "08/21/2015",
+			"refillDate": "10/21/2015",
+			"prescriberFirstName": "Donald",
+			"prescriberLastName": "Duck",
+			"refillConsent": null
+		},
+
+		{
+			"refillKey": {
+				"refillId": "REFILL-ID-GUID-3333",
+				"rxCustomerId": 1234567,
+				"rxSource": "FMCRx_FL"
+			},
+			"rxNumber": 56781234,
+			"medication": "water",
+			"directions": "take with meals",
+			"daysSupply": 30,
+			"refillsRemaining": 12,
+			"lastFilledDate": "08/15/2015",
+			"refillDate": "11/15/2015",
+			"prescriberFirstName": "Donald",
+			"prescriberLastName": "Duck",
+			"refillConsent": {
+				"refillKey": {
+					"refillId": "REFILL-ID-GUID-3333",
+					"rxCustomerId": 1234567,
+					"rxSource": "FMCRx_FL"
+				},
+				"rxNumber": 56781234,
+				"rxDateExpires": "11/01/2015",
+				"refillDate": "11/15/2015",
+				"userAction": 2,
+				"consentRequestedOn": null,
+				"futureFillDate": "11/10/2015",
+				"doNotFillReason": -1,
+				"doNotFillNotes": null,
+				"signature": {
+					"staffCn": "334567",
+					"staffId": "334567",
+					"staffFirstName": "Joe",
+					"staffLastName": "Black",
+					"staffTitle": "RN",
+					"signatureDateTime": "2015-12-03T17:47:54.728-05:00",
+					"signatureToken": "OPAQUE-TOKEN-0002",
+					"signatureSourceId": "1443",
+					"signatureSourceType": "clinicId"
+				}
+			}
+		}
+	]
 }
- 
