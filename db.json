@@ -1,11 +1,8 @@
 {
 	"search": "mrn:12345XYZ",
-	"refills": [{
-			"refillKey": {
-				"refillId": "REFILL-ID-GUID-1111",
-				"rxCustomerId": 1234567,
-				"rxSource": "FMCRx_FL"
-			},
+	"refills": [
+        {
+			"refillKey": 1234567,
 			"rxNumber": 12345678,
 			"rxDateExpires": "11/01/2015",
 			"medication": "aspirin",
@@ -17,49 +14,6 @@
 			"prescriberFirstName": "Donald",
 			"prescriberLastName": "Duck",
 			"refillConsent": null
-		},
-
-		{
-			"refillKey": {
-				"refillId": "REFILL-ID-GUID-3333",
-				"rxCustomerId": 1234567,
-				"rxSource": "FMCRx_FL"
-			},
-			"rxNumber": 56781234,
-			"medication": "water",
-			"directions": "take with meals",
-			"daysSupply": 30,
-			"refillsRemaining": 12,
-			"lastFilledDate": "08/15/2015",
-			"refillDate": "11/15/2015",
-			"prescriberFirstName": "Donald",
-			"prescriberLastName": "Duck",
-			"refillConsent": {
-				"refillKey": {
-					"refillId": "REFILL-ID-GUID-3333",
-					"rxCustomerId": 1234567,
-					"rxSource": "FMCRx_FL"
-				},
-				"rxNumber": 56781234,
-				"rxDateExpires": "11/01/2015",
-				"refillDate": "11/15/2015",
-				"userAction": 2,
-				"consentRequestedOn": null,
-				"futureFillDate": "11/10/2015",
-				"doNotFillReason": -1,
-				"doNotFillNotes": null,
-				"signature": {
-					"staffCn": "334567",
-					"staffId": "334567",
-					"staffFirstName": "Joe",
-					"staffLastName": "Black",
-					"staffTitle": "RN",
-					"signatureDateTime": "2015-12-03T17:47:54.728-05:00",
-					"signatureToken": "OPAQUE-TOKEN-0002",
-					"signatureSourceId": "1443",
-					"signatureSourceType": "clinicId"
-				}
-			}
 		}
 	]
 }
